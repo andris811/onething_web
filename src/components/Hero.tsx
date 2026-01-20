@@ -15,7 +15,7 @@ export default function Hero() {
               Simplify your life and boost productivity by focusing on your most important task each day. OneThing helps you stay mindful, intentional, and make real progress.
             </p>
             <a
-              href="https://apps.apple.com"
+              href="https://apps.apple.com/hu/app/onething-daily/id6757373350"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-[#E5745A] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#d66a4f] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
