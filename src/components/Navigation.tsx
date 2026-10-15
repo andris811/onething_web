@@ -17,6 +17,7 @@ export default function Navigation({ isLegalPage = false }: NavigationProps) {
     ? [{ href: '/', label: 'Back to Home' }]
     : [
         { href: '#features', label: 'Features' },
+        { href: '#screenshots', label: 'Screenshots' },
         { href: '#contact', label: 'Contact' },
       ];
 
@@ -81,6 +82,7 @@ export default function Navigation({ isLegalPage = false }: NavigationProps) {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-[#E5745A] transition-colors z-50"
               aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

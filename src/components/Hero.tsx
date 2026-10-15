@@ -7,12 +7,13 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="opacity-0 animate-fade-in-left">
+            <p className="inline-flex rounded-full border border-[#E5745A]/30 bg-white/70 px-4 py-2 text-sm font-semibold text-[#a84c37] mb-6">Introducing OneThing 3.0</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Focus on One Thing
-              <span className="block text-[#E5745A]">That Matters Most</span>
+              One Meaningful Thing.
+              <span className="block text-[#E5745A]">A Day Worth Remembering.</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed">
-              Simplify your life and boost productivity by focusing on your most important task each day. OneThing helps you stay mindful, intentional, and make real progress.
+              Set an intention or capture a memory. Bring your days together with photos, personal reflections, and a journal that feels like you.
             </p>
             <a
               href="https://apps.apple.com/hu/app/onething-daily/id6757373350"
@@ -28,12 +29,12 @@ export default function Hero() {
           </div>
           <div className="opacity-0 animate-fade-in-right flex justify-center lg:justify-end">
             <div className="bg-gray-900 p-2 rounded-[2.75rem] shadow-2xl w-full max-w-[280px] sm:max-w-[320px]">
-              <div className="aspect-[1290/2796] rounded-[2.5rem] overflow-hidden">
+              <div className="aspect-[1320/2868] rounded-[2.5rem] overflow-hidden">
                 <Image
                   src="/screenshots/onething1.png"
-                  alt="OneThing App Main Screen"
-                  width={1290}
-                  height={2796}
+                  alt="OneThing 3.0 Home with today’s focus, reflection, and a photo journal of previous days"
+                  width={1320}
+                  height={2868}
                   className="w-full h-full object-cover"
                   priority
                 />

@@ -1,6 +1,6 @@
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
-import ReviewsSection from '@/components/ReviewsSection';
+import VersionSection from '@/components/VersionSection';
 import Features from '@/components/Features';
 import ScreenshotsSection from '@/components/ScreenshotsSection';
 import Contact from '@/components/Contact';
@@ -12,7 +12,7 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <ReviewsSection />
+        <VersionSection />
         <Features />
         <ScreenshotsSection />
         <Contact />

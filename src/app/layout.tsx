@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OneThing - Focus on What Matters",
-  description: "OneThing helps you focus on your most important task each day.",
+  title: "OneThing 3.0 — One Meaningful Thing Each Day",
+  description: "A personal photo journal for one meaningful thing each day. Set intentions, capture memories, reflect, and revisit your days with OneThing 3.0.",
 };
 
 export default function RootLayout({
