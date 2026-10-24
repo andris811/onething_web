@@ -1,7 +1,11 @@
+'use client';
+
 import Link from 'next/link';
+import { useLanguage } from '@/components/LanguageProvider';
 import Image from 'next/image';
 
 export default function Footer() {
+  const { t } = useLanguage();
   return (
     <footer className="bg-[#3D3D3D] border-t border-[#E5DCC8] text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -10,7 +14,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <Image
                 src="/onething_logo.png"
-                alt="OneThing Logo"
+                alt={t("OneThing Logo")}
                 width={32}
                 height={32}
                 className="rounded-lg"
@@ -44,19 +48,15 @@ export default function Footer() {
           </div>
           <ul className="flex flex-wrap gap-6 justify-center">
             <li>
-              <Link href="/legal" className="text-gray-400 hover:text-[#E5745A] transition-colors">
-                Terms & Privacy
-              </Link>
+              <Link href="/legal" className="text-gray-400 hover:text-[#E5745A] transition-colors">{t("Terms & Privacy")}</Link>
             </li>
             <li>
-              <a href="mailto:avdev2024@gmail.com" className="text-gray-400 hover:text-[#E5745A] transition-colors">
-                Contact
-              </a>
+              <a href="mailto:avdev2024@gmail.com" className="text-gray-400 hover:text-[#E5745A] transition-colors">{t("Contact")}</a>
             </li>
           </ul>
         </div>
         <div className="text-center mt-8 pt-8 border-t border-gray-900 text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} OneThing. All rights reserved. | Made by <a href="https://andris811.github.io/avdev/" target="_blank" rel="noopener noreferrer" className="text-[#E5745A] hover:text-[#d66a4f] transition-colors">AVDev</a></p>
+          <p>&copy; {new Date().getFullYear()} OneThing. {t("All rights reserved. | Made by")} <a href="https://andris811.github.io/avdev/" target="_blank" rel="noopener noreferrer" className="text-[#E5745A] hover:text-[#d66a4f] transition-colors">AVDev</a></p>
         </div>
       </div>
     </footer>

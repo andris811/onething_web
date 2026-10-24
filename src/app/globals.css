@@ -19,7 +19,8 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), "PingFang SC", "Microsoft YaHei",
+    "Noto Sans SC", Arial, sans-serif;
 }
 
 /* Animation Keyframes */
@@ -106,4 +107,25 @@ section[id] {
 a:focus-visible, button:focus-visible {
   outline: 3px solid #a84c37;
   outline-offset: 5px;
+}
+
+@keyframes reviews-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.reviews-track {
+  animation: reviews-scroll 70s linear infinite;
+}
+
+.reviews-window:hover .reviews-track,
+.reviews-window:focus-within .reviews-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reviews-track { animation: none; width: 100%; }
+  .reviews-group { flex-wrap: wrap; justify-content: center; width: 100%; padding-right: 0; }
+  .reviews-group[aria-hidden="true"] { display: none; }
 }

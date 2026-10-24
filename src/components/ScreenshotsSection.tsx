@@ -1,4 +1,7 @@
-import Image from 'next/image';
+'use client';
+
+import IPhoneFrame from '@/components/IPhoneFrame';
+import { useLanguage } from '@/components/LanguageProvider';
 import ScrollAnimation from './ScrollAnimation';
 
 const screenshots = [
@@ -9,32 +12,28 @@ const screenshots = [
 ];
 
 export default function ScreenshotsSection() {
+  const { t } = useLanguage();
   return (
     <section id="screenshots" className="py-20 sm:py-24 lg:py-32 bg-[#FAF7F2] border-t border-[#E5DCC8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollAnimation>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Meet OneThing 3.0</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">From a daily intention to a memory you can return to.</p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">{t("Meet OneThing 3.0")}</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t("From a daily intention to a memory you can return to.")}</p>
           </div>
         </ScrollAnimation>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
           {screenshots.map((screenshot, index) => (
             <ScrollAnimation key={screenshot.image} delay={index * 100}>
               <figure className="max-w-[280px] mx-auto">
-                <div className="bg-gray-900 p-1.5 rounded-[2.25rem] shadow-xl mb-6">
-                  <Image
-                    src={`/screenshots/onething${screenshot.image}.png`}
-                    alt={screenshot.alt}
-                    width={1320}
-                    height={2868}
-                    sizes="(max-width: 639px) 280px, (max-width: 1023px) 45vw, 25vw"
-                    className="w-full h-auto rounded-[1.9rem]"
-                  />
-                </div>
+                <IPhoneFrame
+                  src={`/screenshots/onething${screenshot.image}.png`}
+                  alt={t(screenshot.alt)}
+                  className="mb-6"
+                />
                 <figcaption className="text-center">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{screenshot.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{screenshot.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(screenshot.title)}</h3>
+                  <p className="text-gray-600 leading-relaxed">{t(screenshot.description)}</p>
                 </figcaption>
               </figure>
             </ScrollAnimation>
